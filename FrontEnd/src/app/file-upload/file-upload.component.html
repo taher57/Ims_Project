@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-primary" >
+
+     <div id="up"  >
+      <h1 style="color:darkgreen">File Upload</h1>
+     </div>
+</nav>
+
+<div id="bt" style="text-align:center">
+   <input (change) ="selectFile($event)" type="file"  />
+</div>
+
+<div id="bt" style="text-align:center; line-height: 200px;">
+
+ <button (click)=uploadFile() class="btn btn-primary" style="margin-right: 50px;">Upload</button>
+
+ <button class="btn btn-primary"  [routerLink]="['/file-check']" >Ims Page</button>
+</div>
+
+

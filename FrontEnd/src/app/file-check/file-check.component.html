@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+    <input [(ngModel)]="searchText" type="search" class="form-control" placeholder="Search"
+        style="margin: 10px auto; width: 50%;">
+
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+              <th>OLT_NE_ID</th>
+              <th>OLT</th>
+              <th>type</th>
+              <th>PON</th>
+              <th>Serialnumber</th>
+              <th>Zone</th>
+              <th>Site</th>
+              <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let n of file | fileFilterPipe:searchText">
+              <td>{{n.oltNeId}}</td>
+              <td>{{n.olt}}</td>
+              <td>{{n.type}}</td>
+              <td>{{n.pon}}</td>
+              <td>{{n.serialnumber}}</td>
+              <td>{{n.zone}}</td>
+              <td>{{n.site}}</td>
+                <td>
+                    <button class="btn btn-warning" style="margin-right: 5px;"
+                       (click)="ngOnInit()" [routerLink]="['/edit-view',n.serialnumber]">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

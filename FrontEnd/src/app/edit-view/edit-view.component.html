@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+    <div class="card" style="width: 50%;margin: 5px auto;">
+        <div class="card-header">
+            Edit Transaction
+        </div>
+        <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="oltNeId">oltNeId</label>
+                <input class="form-control" id="oltNeId" [(ngModel)]=file.oltNeId name="oltNeId"  type="text" >
+              </div>
+
+              <div class="form-group">
+                <label  for="olt">olt</label>
+                <input  class="form-control" id="olt" [(ngModel)]=file.olt name="olt" type="text">
+              </div>
+
+              <div class="form-group">
+                <label  for="type">type</label>
+                <input  class="form-control" id="type" [(ngModel)]=file.type name="type" type="text">
+              </div>
+
+              <div class="form-group">
+                <label  for="pon">pon</label>
+                <input  class="form-control" id="pon" [(ngModel)]=file.pon name="pon" type="text">
+              </div>
+
+              <div class="form-group">
+                <label  for="serialnumber">serialnumber</label>
+                <input  class="form-control" id="serialnumber" [(ngModel)]=file.serialnumber name="serialnumber" type="text">
+              </div>
+
+              <div class="form-group">
+                <label  for="zone">zone</label>
+                <input  class="form-control" id="zone" [(ngModel)]=file.zone name="zone" type="text">
+              </div>
+
+              <div class="form-group">
+                <label  for="site">site</label>
+                <input  class="form-control" id="site" [(ngModel)]=file.site name="site" type="text">
+              </div>
+
+                <button class="btn btn-primary" (click)=updateFile()>Save</button>
+            </form>
+        </div>
+        <div class="card-footer" *ngIf="showAlert">
+            <div class="alert alert-success">
+                <button (click)="closeAlert()" class="close">
+                    &times;
+                </button>
+                <strong>Success</strong>
+            </div>
+        </div>
+    </div>
+</div>
