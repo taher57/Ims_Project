@@ -1,19 +1,20 @@
-<nav class="navbar navbar-light bg-primary" >
+<nav class="navbar navbar" fxLayoutAlign="center center" fxFlexFill >
+  <mat-card fxFlex="25">
 
-     <div id="up"  >
-      <h1 style="color:darkgreen">File Upload</h1>
-     </div>
+    <mat-toolbar color="primary">File Upload</mat-toolbar>
+
+    <div fxLayoutAlign="stretch" fxLayout="column" class="form">
+      <input (change) ="selectFile($event)" type="file"  />
+      <button mat-raised-button (click)=uploadFile() color="primary">Upload</button>
+    </div>
+    <div class="card-footer" *ngIf="showAlert">
+      <div class="alert alert-success">
+          <button (click)="closeAlert()" class="close">
+              &times;
+          </button>
+          <strong>Success</strong>
+      </div>
+    </div>
+
+  </mat-card>
 </nav>
-
-<div id="bt" style="text-align:center">
-   <input (change) ="selectFile($event)" type="file"  />
-</div>
-
-<div id="bt" style="text-align:center; line-height: 200px;">
-
- <button (click)=uploadFile() class="btn btn-primary" style="margin-right: 50px;">Upload</button>
-
- <button class="btn btn-primary"  [routerLink]="['/file-check']" >Ims Page</button>
-</div>
-
-

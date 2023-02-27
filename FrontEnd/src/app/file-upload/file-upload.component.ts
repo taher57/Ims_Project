@@ -14,6 +14,7 @@ export class FileUploadComponent implements OnInit {
 
   fileUploadUrl="http://localhost:8080/product/upload";
   data = [];
+  showAlert = false;
 
   constructor( private _http:HttpClient,private fileService:FileService, private router:Router ) {
 
@@ -35,12 +36,15 @@ export class FileUploadComponent implements OnInit {
   {
     let formData = new FormData()
     formData.append("file",this.file)
-    this._http.post(this.fileUploadUrl,formData).subscribe(
-      (success) => {
-        console.log(success);
+    this._http.post(this.fileUploadUrl,formData).subscribe((response :any) => {
+        this.showAlert=true;
+        console.log(response);
         alert('Excel file is uploaded successfully');
       }
     )
+ }
+  closeAlert() {
+  this.showAlert = false;
  }
 
 }
