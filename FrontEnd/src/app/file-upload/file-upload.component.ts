@@ -37,9 +37,8 @@ export class FileUploadComponent implements OnInit {
     let formData = new FormData()
     formData.append("file",this.file)
     this._http.post(this.fileUploadUrl,formData).subscribe((response :any) => {
+        console.log("Excel file is uploaded successfully");
         this.showAlert=true;
-        console.log(response);
-        alert('Excel file is uploaded successfully');
       }
     )
  }

@@ -7,7 +7,7 @@
       <input (change) ="selectFile($event)" type="file"  />
       <button mat-raised-button (click)=uploadFile() color="primary">Upload</button>
     </div>
-    <div class="card-footer" *ngIf="showAlert">
+    <div class="card-footer" *ngIf=showAlert>
       <div class="alert alert-success">
           <button (click)="closeAlert()" class="close">
               &times;
