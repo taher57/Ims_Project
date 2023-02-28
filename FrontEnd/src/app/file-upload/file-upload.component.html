@@ -1,11 +1,12 @@
 <nav class="navbar navbar" fxLayoutAlign="center center" fxFlexFill >
-  <mat-card fxFlex="25">
+  <mat-card fxFlex="25" style="line-height: 1.5;">
 
     <mat-toolbar color="primary">File Upload</mat-toolbar>
 
-    <div fxLayoutAlign="stretch" fxLayout="column" class="form">
-      <input (change) ="selectFile($event)" type="file"  />
-      <button mat-raised-button (click)=uploadFile() color="primary">Upload</button>
+    <div fxLayoutAlign="stretch" fxLayout="column" class="form"  >
+      <input (change) ="selectFile($event)" type="file" />
+      <br/>
+      <button mat-raised-button (click)=uploadFile() color="primary" >Upload</button>
     </div>
     <div class="card-footer" *ngIf=showAlert>
       <div class="alert alert-success">

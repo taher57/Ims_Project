@@ -1,7 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 body {
-  background-image: url('https://th.bing.com/th/id/R.a9b6c61988c8440c26f9233c72b48a2c?rik=sVGTm92gxqOkcw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fa%2fe%2f1%2f1092428-vintage-hd-backgrounds-1920x1080-notebook.jpg&ehk=rgCXWq4Zrq76UW1LsokDTlfw88JanuZi9RioIe8IxPo%3d&risl=&pid=ImgRaw&r=0');
-  background-size: 100%;
+  background-image: url('src/assets/images/backround.jpg');
+  background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
